@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">SelfKart</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+
+    <string name="forgotpassword"><u> Forgot Password? </u></string>
+    <string name="title_activity_store_search">Map</string>
+
+    <string name="title_activity_order_confirmation">OrderConfirmation</string>
+    <string name="title_activity_store_information">StoreInformation</string>
+    <string name="title_activity_check_out">CheckOut</string>
+    <string name="title_activity_storeslist">Storeslist</string>
+    <string name="title_activity_store_landing">StoreLanding</string>
+
+    <string name="title_activity_store_details">StoreDetails</string>
+    <string name="title_activity_item_details">ItemDetails</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <string name="title_activity_welcome">Welcome</string>
+</resources>

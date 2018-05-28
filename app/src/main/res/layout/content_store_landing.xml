@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_store_landing">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/storeheader"
+        android:layout_margin="16dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TextView
+            android:id="@+id/supermarketname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:text="Spar Super Market" >
+        </TextView>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@+id/phonescan"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="end"
+            android:background="@drawable/roundedlinearlayoutbackground"
+            android:src="@drawable/fav"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/phonescan"
+            android:background="@drawable/roundedlinearlayoutbackground"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/phonescan"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:id="@+id/noItems"
+        android:layout_below="@+id/storeheader"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/emptyscreencart"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:text="Let's get started,"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:text="Begin scanning items"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:background="@drawable/roundedbutton"
+        android:layout_below="@+id/noItems"
+        android:orientation="horizontal"
+        android:layout_marginTop="36dp"
+        android:id="@+id/noItemsBtn"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scanitems"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/noItems"
+            android:drawablePadding="8dp"
+            android:text="Scan items"
+            android:drawableLeft="@drawable/phonescan"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:visibility="invisible"
+        android:layout_margin="16dp"
+        android:id="@+id/scanneditemslist"
+        android:layout_below="@+id/storeheader"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@+id/mapviewbtn"
+            android:id="@+id/itemlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/itemlist"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="8dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Sub total"
+                    android:layout_marginRight="20dp"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/subtotal"
+                    android:layout_height="match_parent"
+
+                    android:text="Rs. 14.79"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"/>
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedbuttonprimary"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:gravity="center"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+                android:layout_weight="1"
+                android:id="@+id/checkout"
+                android:textColor="@color/buttontextcolor"
+                android:text="Checkout"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

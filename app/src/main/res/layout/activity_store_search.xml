@@ -1,0 +1,84 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            class="com.google.android.gms.maps.SupportMapFragment" />
+
+        <LinearLayout
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:weightSum="1"
+            android:layout_margin="16dp"
+            android:layout_gravity="top"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editMobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="0.9"
+                android:layout_margin="5dp"
+                android:background="@drawable/login_edittext"
+                android:ems="10"
+                android:hint="Find stores"
+                android:drawableLeft="@drawable/searchicondr" >
+            </EditText>
+
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/roundedlinearlayoutbackground"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.1"
+                android:src="@drawable/phonescan"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/openstores"
+            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp"
+            android:padding="16dp"
+            android:background="@drawable/roundedlayoutbackground"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="75dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/uparrow"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="75dp"
+                android:text="Stores"/>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

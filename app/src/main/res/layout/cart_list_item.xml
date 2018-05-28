@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:numberpicker="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="5dp"
+    android:padding="16dp"
+    android:clickable="true"
+    android:background="@drawable/roundedlinearlayoutbackground"
+    android:orientation="vertical">
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+        android:textStyle="bold"
+        android:text="Spar Super Market"
+        android:id="@+id/name"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_below="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+        android:textStyle="bold"
+        android:text="No 360 Rd,3rd Floor, Oasis Center"
+        android:drawablePadding="9dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/offerbtn"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/description"
+        android:orientation="horizontal"
+        android:layout_height="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="1 Offer"
+            android:textColor="@color/colorPrimary"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/arrow"
+            android:src="@drawable/uparrow"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/offerbtn"
+        android:background="#f4eddb"
+        android:visibility="visible"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/offersnotes"
+
+            android:layout_marginRight="8dp"
+            android:text="Buy 1 get 1 365 every day value, Organic Italian Salad. 10 oz at 50% off. Offer valid till stock lasts"
+           />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:background="@android:color/white">
+
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:padding="0dp"
+            android:textColor="@android:color/black"
+            android:background="@null"
+            android:id="@+id/decrement"
+            android:textStyle="bold"
+            android:text="—"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:background="@android:color/white"
+            android:layout_height="match_parent"
+            android:text="1"
+            android:textColor="@android:color/black"
+            android:inputType="number"
+            android:id="@+id/display"
+            android:gravity="center"
+            />
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:padding="0dp"
+            android:textSize="25sp"
+            android:textColor="@android:color/black"
+            android:background="@null"
+            android:id="@+id/increment"
+            android:text="+"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
